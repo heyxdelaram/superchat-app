@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Navbar from "./components/Navbar";
+
+const style = {
+  app: `max-w-[720px] mx-auto text-center`,
+  section: `flex flex-col h-[90vh] bg-gray-100 mt-10`,
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={style.app}>
+      <section className={style.section}>
+        {/*Navbar*/}
+        <Navbar />
+        {/*Chat Component */}
+      </section>
     </div>
   );
 }
