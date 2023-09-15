@@ -1,15 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
-import {
-  query,
-  collection,
-  onSnapshot,
-  orderBy,
-  serverTimestamp,
-} from "firebase/firestore";
+import { query, collection, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import SendMessage from "./SendMessage";
-
+//todo: fix scrolling
 const Chat = () => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
