@@ -5,7 +5,7 @@ import SignIn from "./SignIn";
 import LogOut from "./LogOut";
 
 const style = {
-  nav: `bg-slate-300 h-20 flex justify-between items-center p-4 rounded-t-lg`,
+  nav: `bg-slate-300 h-15 flex justify-between items-center pr-4 pl-6 rounded-full p-5`,
   heading: `font-medium text-3xl`,
 };
 
@@ -14,7 +14,7 @@ function Navbar() {
   console.log(user);
   return (
     <div className={style.nav}>
-      <h1 className={style.heading}>Super🔥Chat</h1>
+      <h1 className={style.heading}>Chat 💬</h1>
       {user ? <LogOut /> : <SignIn />}
     </div>
   );
