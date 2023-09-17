@@ -1,6 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Global CSS or in your stylesheet */
+/*todo:fix the dark mode whte lne*/
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+.dark-mode {
+  background-color: black;
+  color: white; /* Add text color for better visibility */
+}
 
 /* width */
 ::-webkit-scrollbar {

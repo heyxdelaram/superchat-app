@@ -4,7 +4,7 @@ import { query, collection, onSnapshot, orderBy } from "firebase/firestore";
 import { db } from "../firebase";
 import SendMessage from "./SendMessage";
 
-const Chat = () => {
+const Chat = ({ isDark }) => {
   const [messages, setMessages] = useState([]);
   const scroll = useRef();
 
@@ -22,7 +22,7 @@ const Chat = () => {
 
   return (
     <>
-      <main className="flex flex-col relative overflow-auto hover:overflow-auto h-inherit scroll-smooth mt-10 mb-5">
+      <main className="flex flex-col relative overflow-auto hover:overflow-auto scroll-smooth mt-10 mb-5">
         {/* Chat Message Component */}
         {messages &&
           messages.map((message) => (
@@ -31,7 +31,7 @@ const Chat = () => {
       </main>
       {/* Send Message Component */}
       <div className="mb-10">
-        <SendMessage scroll={scroll} />
+        <SendMessage isDark={isDark} scroll={scroll} />
       </div>
       <span ref={scroll}></span>
     </>

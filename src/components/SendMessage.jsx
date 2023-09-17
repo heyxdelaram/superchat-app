@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { auth, db } from "../firebase";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
-const SendMessage = ({ scroll }) => {
+const SendMessage = ({ scroll, isDark }) => {
   const [input, setInput] = useState("");
 
   const sendMessage = async (e) => {
@@ -29,7 +29,9 @@ const SendMessage = ({ scroll }) => {
       <input
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        className="w-full text-xl p-5 bg-slate-300  outline-none border-none rounded-full mr-3"
+        className={`${
+          isDark ? `bg-[#121212] text-white` : `bg-slate-300`
+        } w-full text-xl p-5 outline-none border-none rounded-full mr-3`}
         type="text"
         placeholder="send message"
       />
